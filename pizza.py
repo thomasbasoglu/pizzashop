@@ -41,9 +41,13 @@ def order():
 
 def menu():
     def getData():
-        data = request.get_json()
-        price = data['totalPrice']
-    return render_template('template1.html')
+        i = 0
+        a = []
+        while i < 18:
+            price = request.form['quantity'+str(i)]
+            a.append(price)
+            i = i + 1
+        return render_template('template1.html',value = i)
 
 @app.route('/payment')
 
