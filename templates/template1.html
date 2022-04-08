@@ -1,116 +1,221 @@
 <!DOCTYPE HTML>
-<head>
-    <style>
-        img{
-            height:200px;
-            width: 200px;
-        }
+<hmtl>
+    <head>
+        <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js%22%3E"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="logo">
+        <img src="img/logo.png" alt="logo">
+        </div>
 
-        table{
-            margin:auto;
-        }
+        <button class="button_pizza collapsible" type="button">Pizza's</button>
 
-        td{
-            padding-right: 40px;
-            padding-bottom: 12px;
-        }
-        
-    </style>
-  <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js%22%3E</script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-</head>
 
-<body>
-    
-    <table>
-        <tr>
-            <td>
-                <img src="Photos/margherita.jpg" alt="">
-                <h1>Pizza Margherita</h1>
-                <h2>€5.00</h2>
-                <p>Tomato sauce, oregano and cheese</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
+        <table class="content">
+            <tr>
+                <td class="container1">
+                    <img src="Photos/margherita.jpg" alt="">
+                    <h1>Pizza<br>Margherita</h1>
+                    <h2>€5.00</h2>
+                    <p class="space">Tomato sauce, oregano and cheese</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
                 </td>
+                <td class="container2">
+                    <img src="Photos/salami.jpg" alt="">
+                    <h1>Pizza<br>Salami</h1>
+                    <h2>€6.00</h2>
+                    <p class="space">Mozzarella, beef salami,tomato sauce</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container3">
+                    <img src="Photos/BBQ.jpg" alt="">
+                    <h1>Pizza<br>BBQ Chicken</h1>
+                    <h2>€7.50</h2>
+                    <p class="space">Mozzarella, onions,chicken, corn, bbq sauce,BBQ sauce</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="container1">
+                    <img src="Photos/4_cheese.jpg" alt="">
+                    <h1>pizza<br>4 Cheese</h1>
+                    <h2>€6.50</h2>
+                    <p class="space">Crème frache, mozzarella, Gouda cheese and gorgonzola, cheddar </p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container2">
+                    <img src="Photos/doner.jpg" alt="">
+                    <h1>pizza<br>Doner</h1>
+                    <h2>€5.50</h2>
+                    <p class="space">Tomato sauce, mozzarella, iceberg lettuce, garlic and döner (halal) </p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container3">
+                    <img src="Photos/veggie.jpg" alt="">
+                    <h1>pizza<br>Veggie</h1>
+                    <h2>€5.00</h2>
+                    <p class="space">Tomato sauce, mozzarella, red onion, bell pepper, mushrooms, olives and extra mozzarella</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="container1">
+                    <img src="Photos/Hawaiian.jpg" alt="">
+                    <h1>pizza<br>Hawaiian</h1>
+                    <h2>€7.50</h2>
+                    <p class="space">Barbeque pizza</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container2">
+                    <img src="Photos/barbeque.jpg" alt="">
+                    <h1>Pizza<br>BBQ</h1>
+                    <h2>€7.00</h2>
+                    <p class="space">Spicy beef,onions, mozzarella barbecue sauce and smoked bacon strips</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container3">
+                    <img src="Photos/chocolate.jpg" alt="">
+                    <h1>Pizza<br>Chocolate</h1>
+                    <h2>€5.50</h2>
+                    <p class="space">Chocolate and biscuit pieces</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+            </tr>   
+        </table>
+
+        <button class="button_pasta collapsible" type="button">Pasta's & Drinks</button>
+        <table class="content">
+            <tr>
+                <td class="container1">
+                    <img src="Photos/bolognaise.jpg" alt="">
+                    <h1>Spaghetti Bolognaise</h1>
+                    <h2>€6.50</h2>
+                    <p>Tomato sauce, minced beef, onion, cherry tomatoes and carrot</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container2">
+                    <img src="Photos/carbonara.jpg" alt="">
+                    <h1>Pasta Carbonara</h1>
+                    <h2>€5.50</h2>
+                    <p>Cream, bacon, onion, fresh egg, Grana Padano and parsley
+
+                    </p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container3">
+                    <img src="Photos/macaroni.jpg" alt="">
+                    <h1>Pasta Mac'&cheese</h1>
+                    <h2>€6.00</h2>
+                    <p>Cheddar, pancetta and cherry tomatoes</p>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="container1">
+                    <img src="Photos/coca.jpg" alt="">
+                    <h1>Cola 330ml</h1>
+                    <h2>€2.50</h2>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container2">
+                    <img src="Photos/redbull.jpg"  alt="red bull">
+                    <h1>Red bull</h1>
+                    <h2>€3.00</h2>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container3">
+                    <img src="Photos/spa.jpg" alt="">
+                    <h1>Spa Intense 1L</h1>
+                    <h2>€2.00</h2>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="container1">
+                    <img src="Photos/sprite.jpg" alt="">
+                    <h1>Sprite 330ml</h1>
+                    <h2>€2.50</h2>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container2">
+                    <img src="Photos/jupiler.jpg" alt="">
+                    <h1>Jupiler 330ml</h1>
+                    <h2>€4.00</h2>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+                <td class="container3">
+                    <img src="Photos/fanta.jpg" alt="">
+                    <h1>Fanta 330ml</h1>
+                    <h2>€2.50</h2>
+                    <div class="quantity buttons_added">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    </div>
+                </td>
+            </tr>   
+        </table>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
             
-            <td>
-                <img src="Photos/salami.jpg" alt="">
-                <h1>Pizza Salami</h1>
-                <h2>€6.00</h2>
-                <p>Mozzarella, beef salami,tomato sauce</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-            <td>
-                <img src="Photos/BBQ.jpg" alt="">
-                <h1>Pizza BBQ Chicken</h1>
-                <h2>€7.50</h2>
-                <p>Mozzarella, onions,chicken, corn, bbq sauce,BBQ sauce</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="Photos/4_cheese.jpg" alt="">
-                <h1>4 Cheese pizza</h1>
-                <h2>€6.50</h2>
-                <p>Crème frache, mozzarella, Gouda cheese and gorgonzola, cheddar </p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-            <td>
-                <img src="Photos/doner.jpg" alt="">
-                <h1>Doner pizza</h1>
-                <h2>€5.50</h2>
-                <p>Tomato sauce, mozzarella,iceberg lettuce, garlic and döner (halal) </p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-            <td>
-                <img src="Photos/veggie.jpg" alt="">
-                <h1>Veggie pizza</h1>
-                <h2>€5.00</h2>
-                <p>Tomato sauce, mozzarella, red onion, bell pepper, mushrooms, olives and extra mozzarella</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="Photos/Hawaiian.jpg" alt="">
-                <h1>Hawaiian pizza</h1>
-                <h2>€7.50</h2>
-                <p>Barbeque pizza</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-            <td>
-                <img src="Photos/barbeque.jpg" alt="">
-                <h1>Pizza</h1>
-                <h2>€7.00</h2>
-                <p>Spicy beef,onions, mozzarella barbecue sauce and smoked bacon strips</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-            <td>
-                <img src="Photos/chocolate.jpg" alt="">
-                <h1>Chocolate Pizza</h1>
-                <h2>€5.50</h2>
-                <p>Chocolate and biscuit pieces</p>
-                <div class="quantity buttons_added">
-    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-</div>
-                </td>
-        </tr>   
-    </table>
-</body>
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
+
+
+        <form action="">
+        <button class="button1" type="button">Order here</button>
+        </form>
+
+    </body>
+
+    <footer>
+        &copy; Group 1-5
+    </footer>
+
+</hmtl>
