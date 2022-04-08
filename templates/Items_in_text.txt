@@ -1,0 +1,46 @@
+Spaghetti Bolognaise
+Tomato sauce, minced beef, onion, cherry tomatoes and carrot
+
+Pasta Carbonara
+Cream, bacon, onion, fresh egg, Grana Padano and parsley
+
+
+Pasta all'arrabbiata
+Tomato sauce, garlic, onion and chili pepper
+
+pizass-----------------------------
+Pizza Margherita
+€5.00
+Tomato sauce, oregano and cheese
+
+Pizza Salami
+€6.00
+Mozzarella, beef salami,tomato sauce
+
+Pizza BBQ Chicken
+€7.50
+Mozzarella, onions,chicken, corn, bbq sauce,BBQ sauce
+
+4 Cheese pizza
+€6.50
+Crème frache, mozzarella, Gouda cheese and gorgonzola, cheddar 
+
+Doner pizza
+€5.50
+Tomato sauce, mozzarella,iceberg lettuce, garlic and döner (halal) 
+
+Veggie pizza
+€5.00
+Tomato sauce, mozzarella, red onion, bell pepper, mushrooms, olives and extra mozzarella
+
+Hawaiian pizza
+€7.50
+Pineapple, ham, bacon and cheese
+
+Barbeque pizza
+€7.00
+Spicy beef,onions, mozzarella barbecue sauce and smoked bacon strips
+
+Chocolate Pizza
+€5.50
+Chocolate and biscuit pieces
