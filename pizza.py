@@ -1,16 +1,14 @@
-from cgitb import text
 from flask import *
 from datetime import *
 from time import *
-import sqlite3
+from pymysql import *
 
 app = Flask(__name__, template_folder='templates')
 
 
-def dbSetup():
-    con = sqlite3.connect('example.db')
-    cur = con.cursor()
-    cur.execute('''CREATE TABLE [IF NOT EXISTS] pizzashop( 
+def dbSetup(host, user, pwd, db):
+    cursor = connect(host, user, pwd, db).cursor()
+    cursor.execute('''CREATE TABLE [IF NOT EXISTS] pizzashop( 
         primary_key_column int PRIMARY KEY,
         date_time date,
         order_number int, 
@@ -39,26 +37,22 @@ def order():
         olives = data['extraolives']
     return render_template('order.html')
 
-@app.route('/menu')
+@app.route('/menu', methods=['GET','POST'])
 
 def menu():
-    return render_template('template1.html')
+    def getData():
+        i = 0
+        a = []
+        while i < 18:
+            price = request.form['quantity'+str(i)]
+            a.append(price)
+            i = i + 1
+        return render_template('template1.html',value = i)
 
-@app.route('/menu', methods=['POST'])
-
-def menu_post():
-    i = 0
-    pizzaName = ['margherita','salami', 'bbqChicken', '4chesse', 'doner', 'veggie','hawaian', 'bbq', 'chocolate']
-    d = {}
-    while i < 10:
-        d[pizzaName[i]] = request.form['quantity' + str(i + 1)]
-        i = i + 1
-    return d
 @app.route('/payment')
 
 def payment():
     return render_template('payment.html')
-
 
 @app.route('/cash')
 
@@ -97,5 +91,5 @@ def chef():
 
 
 if __name__ == "__main__":
-    dbSetup()
+    dbSetup("localhost","testuser","test123","TESTDB" )
     app.run()
