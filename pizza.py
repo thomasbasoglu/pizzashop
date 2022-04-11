@@ -29,13 +29,7 @@ def welcomePage():
 
 @app.route('/order', methods=['GET','POST'])
 
-def order():
-    def getData():
-        data = request.get_json()
-        cheese = data['extracheese']
-        salami = data['extrasalami']
-        olives = data['extraolives']
-    return render_template('order.html')
+
 
 @app.route('/menu', methods=['GET','POST'])
 
