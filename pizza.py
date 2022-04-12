@@ -183,7 +183,7 @@ def menu_post():
     
 
     writer.writerow(['With the total of ' + '\u20ac' + str(total)])
-    return ''
+    return ' <h1>\"order has been placed!!!\"</h1>'
 
     
     
@@ -206,7 +206,7 @@ def chef():
     csvreader = csv.reader(file)
     rows = []
     for row in csvreader:
-            rows.append(row)
+        rows.append(row)
     
     
     return render_template('CashierChef.html', pizzal = rows)
