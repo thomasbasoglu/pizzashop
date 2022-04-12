@@ -1,12 +1,16 @@
 from cgitb import text
+import csv
 from flask import *
 from datetime import *
 from time import *
 import sqlite3
+import csv
 
 app = Flask(__name__, template_folder='templates')
+pizza = []
 
 
+ 
 
 def dbSetup():
     con = sqlite3.connect('example.db')
@@ -30,31 +34,19 @@ def getTime():
 def welcomePage(): 
    return render_template('index.html', time = getTime())
 
-@app.route('/order', methods=['GET','POST'])
-
-def order():
-    def getData():
-        data = request.get_json()
-        cheese = data['extracheese']
-        salami = data['extrasalami']
-        olives = data['extraolives']
-    return render_template('order.html')
-
-@app.route('/menu')
+@app.route('/menu.html')
 
 def menu():
     return render_template('template1.html')
 
-@app.route('/menu', methods=['POST'])
+@app.route('/menu', methods=['GET','POST'])
 
 def menu_post():
-    i = 0
-    pizzaName = ['margherita','salami', 'bbqChicken', '4chesse', 'doner', 'veggie','hawaian', 'bbq', 'chocolate']
-    d = {}
-    while i < 10:
-        d[pizzaName[i]] = request.form['quantity' + str(i + 1)]
-        i = i + 1
-    return d
+    return request.form('quantity1')
+
+    
+    
+
 @app.route('/payment')
 
 def payment():
@@ -69,7 +61,7 @@ def cash():
 @app.route('/chef')
 
 def chef():
-    return render_template('CashierChef.html')
+    return render_template('CashierChef.html', pizzal = pizza)
 
 # @app.route('/oven') 
 # def oven(): 
@@ -100,3 +92,4 @@ def chef():
 if __name__ == "__main__":
     dbSetup()
     app.run()
+
