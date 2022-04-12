@@ -6,6 +6,7 @@ from datetime import *
 from time import *
 import sqlite3
 import csv
+from random import * 
 
 app = Flask(__name__, template_folder='templates')
 pizza = []
@@ -33,9 +34,9 @@ def getTime():
 @app.route('/')
 
 def welcomePage(): 
-   return render_template('index.html', time = getTime())
+   return render_template('welcome.html', time = getTime())
 
-@app.route('/menu.html')
+@app.route('/template1.html')
 
 def menu():
     return render_template('template1.html')
@@ -186,18 +187,24 @@ def menu_post():
     return ' <h1>\"order has been placed!!!\"</h1>'
 
     
-    
+@app.route('/total.html' ,methods=['GET','POST'])
 
-@app.route('/payment')
+def total():
+    return render_template('total.html')
+
+   
+
+@app.route('/payment.html')
 
 def payment():
     return render_template('payment.html')
 
 
-@app.route('/cash')
+@app.route('/Cash.html')
 
 def cash():
-    return render_template('cash.html')
+    orderNumber = randint(0,99999)
+    return render_template('cash.html', orderNumber=orderNumber)
 
 @app.route('/chef')
 
