@@ -31,6 +31,17 @@ p.space{
     height: 50px;
 }
 
+p.cat{
+    font-size: 70px;
+    margin-bottom: 0;
+    font-style: oblique;
+}
+
+td.line:first-child{
+    border-bottom: 1px solid rgb(62, 59, 59);
+    border-width: 2px;
+}
+
 .container1{
     display: inline-block;
     width: 300px;
@@ -62,7 +73,7 @@ p.space{
 }
 
 table{
-    display: inline-block;
+    display: block;
     width: auto;
     height: auto;
     overflow: auto;
@@ -92,23 +103,6 @@ p.number{
     margin: 0;
     font-size: 90px;
     font-style: oblique;
-}
-
-ul.extratopp{
-    list-style: none;
-    font-size: 20px;
-    float: left;
-    margin-left: 350px;
-    margin-bottom: 50px;
-}
-
-
-ul.pricetopp{
-    list-style: none;
-    font-size: 20px;
-    float: right;
-    margin-right: 400px;
-    margin-bottom: 50px;
 }
 
 .logo img{
@@ -289,13 +283,11 @@ h1.paycash{
 
 .content{
     padding: 0px;
-    display: none;
     overflow: hidden;
     background-color:rgb(255, 255, 255);
     width: auto;
     height: auto;
 }
-
 
 
 .button1{
