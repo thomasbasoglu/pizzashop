@@ -45,79 +45,144 @@ def menu():
 def menu_post():
     f = open('data.csv', 'a')
     writer = csv.writer(f)
+    total = 0 
     writer.writerow(["---------------------------------------------" + getTime()])
     if str(request.form['quantity1']) != '0':
-        row= ('Margherita   ' + request.form['quantity1'])
+        data = int(request.form['quantity1'])
+        price = data * 5
+        row= ('Margherita   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
 
     if str(request.form['quantity2']) != '0':
-        row= ('Salami   ' + request.form['quantity2'])
+        data = int(request.form['quantity2'])
+        price = data * 7
+        row= ('Salami   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
-
+        
     if str(request.form['quantity3']) != '0':
-        row= ('BBQChicken   ' + request.form['quantity3'])
+        data = int(request.form['quantity3'])
+        price = data * 7.50
+        row= ('BBQChicken   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
+       
 
     if str(request.form['quantity4']) != '0' :
-        row= ('4Cheese   ' + request.form['quantity4'])
+        data = int(request.form['quantity4'])
+        price = data * 6.50
+        row= ('4Cheese   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
+   
 
     if str(request.form['quantity5']) != '0':
-        row= ('Doner   ' + request.form['quantity5'])
+        data = int(request.form['quantity5'])
+        price = data * 5.50
+        row= ('Doner   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
-
+    
     if str(request.form['quantity6']) != '0':
-        row= ('Veggie   ' + request.form['quantity6'])
+        data = int(request.form['quantity6'])
+        price = data * 5
+        row= ('Veggie   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
+        writer.writerow([row])
+   
+    if str(request.form['quantity7']) != '0':
+        data = int(request.form['quantity7'])
+        price = data * 7.50
+        row= ('Hawaiian   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
 
-    if str(request.form['quantity7']) != '0':
-        row= ('Hawaiian   ' + request.form['quantity7'])
-        writer.writerow([row])
 
     if str(request.form['quantity8']) != '0':
-        row= ('BBQ   ' + request.form['quantity8'])
+        data = int(request.form['quantity8'])
+        price = data * 7
+        row= ('BBQ   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
 
+
     if str(request.form['quantity9']) != '0':
-        row= ('Chocolate   ' + request.form['quantity9'])
+        data = int(request.form['quantity9'])
+        price = data * 5.50
+        row= ('Chocolate   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
 
     if str(request.form['quantity10']) != '0':
-        row= ('Spaghetti Bolognaise   ' + request.form['quantity10'])
+        data = int(request.form['quantity10'])
+        price = data * 6.50
+        row= ('Spaghetti Bolognaise   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
-
+   
     if str(request.form['quantity11']) != '0':
-        row= ('Carbonara   ' + request.form['quantity11'])
+        data = int(request.form['quantity11'])
+        price = data * 5.50
+        row= ('Spaghetti Carbonara   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
 
     if str(request.form['quantity12']) != '0':
-        row= ('Mac&Cheese   ' + request.form['quantity12'])
-        writer.writerow([row])
-
-    if str(request.form['quantity13']) != '0':
-        row= ('Cola   ' + request.form['quantity13'])
+        data = int(request.form['quantity12'])
+        price = data * 6
+        row= ('Mac&Cheese   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
     
-    if str(request.form['quantity14']) != '0':
-        row= ('Red Bull   ' + request.form['quantity14'])
+
+    if str(request.form['quantity13']) != '0':
+        data = int(request.form['quantity13'])
+        price = data * 2.50
+        row= ('Cola   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
+
+    
+    if str(request.form['quantity14']) != '0':
+        data = int(request.form['quantity14'])
+        price = data * 3
+        row= ('Red Bull   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
+        writer.writerow([row])
+    
 
     if str(request.form['quantity15']) != '0':
-        row= ('Spa Intense   ' + request.form['quantity15'])
+        data = int(request.form['quantity15'])
+        price = data * 2
+        row= ('Spa Intense   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
+    
 
     if str(request.form['quantity16']) != '0':
-        row= ('Sprite   ' + request.form['quantity16'])
+        data = int(request.form['quantity16'])
+        price = data * 2.50
+        row= ('Sprite   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
     
     if str(request.form['quantity17']) != '0':
-        row= ('Jupiler   ' + request.form['quantity17'])
+        data = int(request.form['quantity17'])
+        price = data * 4
+        row= ('Jupiler   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
 
     if str(request.form['quantity18']) != '0':
-        row= ('Fanta   ' + request.form['quantity18'])
+        data = int(request.form['quantity18'])
+        price = data * 2.50
+        row= ('Fanta   ' +  str(data) + '   ' + '\u20ac' + str(price) )
+        total = total + price
         writer.writerow([row])
+    
 
+    writer.writerow(['With the total of ' + '\u20ac' + str(total)])
     return ''
 
     
@@ -175,5 +240,5 @@ def chef():
 if __name__ == "__main__":
     dbSetup()
     app.config['DEBUG'] = True
-    app.run(host='145.93.73.178', port='8000', debug=True)
+    app.run(host='145.93.73.178', port='5000', debug=True)
 
