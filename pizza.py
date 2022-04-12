@@ -1,5 +1,6 @@
 from cgitb import text
 import csv
+from distutils.log import debug
 from flask import *
 from datetime import *
 from time import *
@@ -42,7 +43,82 @@ def menu():
 @app.route('/menu', methods=['GET','POST'])
 
 def menu_post():
-    return request.form('quantity1')
+    f = open('data.csv', 'a')
+    writer = csv.writer(f)
+    writer.writerow(["---------------------------------------------" + getTime()])
+    if str(request.form['quantity1']) != '0':
+        row= ('Margherita   ' + request.form['quantity1'])
+        writer.writerow([row])
+
+    if str(request.form['quantity2']) != '0':
+        row= ('Salami   ' + request.form['quantity2'])
+        writer.writerow([row])
+
+    if str(request.form['quantity3']) != '0':
+        row= ('BBQChicken   ' + request.form['quantity3'])
+        writer.writerow([row])
+
+    if str(request.form['quantity4']) != '0' :
+        row= ('4Cheese   ' + request.form['quantity4'])
+        writer.writerow([row])
+
+    if str(request.form['quantity5']) != '0':
+        row= ('Doner   ' + request.form['quantity5'])
+        writer.writerow([row])
+
+    if str(request.form['quantity6']) != '0':
+        row= ('Veggie   ' + request.form['quantity6'])
+        writer.writerow([row])
+
+    if str(request.form['quantity7']) != '0':
+        row= ('Hawaiian   ' + request.form['quantity7'])
+        writer.writerow([row])
+
+    if str(request.form['quantity8']) != '0':
+        row= ('BBQ   ' + request.form['quantity8'])
+        writer.writerow([row])
+
+    if str(request.form['quantity9']) != '0':
+        row= ('Chocolate   ' + request.form['quantity9'])
+        writer.writerow([row])
+
+    if str(request.form['quantity10']) != '0':
+        row= ('Spaghetti Bolognaise   ' + request.form['quantity10'])
+        writer.writerow([row])
+
+    if str(request.form['quantity11']) != '0':
+        row= ('Carbonara   ' + request.form['quantity11'])
+        writer.writerow([row])
+
+    if str(request.form['quantity12']) != '0':
+        row= ('Mac&Cheese   ' + request.form['quantity12'])
+        writer.writerow([row])
+
+    if str(request.form['quantity13']) != '0':
+        row= ('Cola   ' + request.form['quantity13'])
+        writer.writerow([row])
+    
+    if str(request.form['quantity14']) != '0':
+        row= ('Red Bull   ' + request.form['quantity14'])
+        writer.writerow([row])
+
+    if str(request.form['quantity15']) != '0':
+        row= ('Spa Intense   ' + request.form['quantity15'])
+        writer.writerow([row])
+
+    if str(request.form['quantity16']) != '0':
+        row= ('Sprite   ' + request.form['quantity16'])
+        writer.writerow([row])
+    
+    if str(request.form['quantity17']) != '0':
+        row= ('Jupiler   ' + request.form['quantity17'])
+        writer.writerow([row])
+
+    if str(request.form['quantity18']) != '0':
+        row= ('Fanta   ' + request.form['quantity18'])
+        writer.writerow([row])
+
+    return ''
 
     
     
@@ -61,7 +137,14 @@ def cash():
 @app.route('/chef')
 
 def chef():
-    return render_template('CashierChef.html', pizzal = pizza)
+    file = open('data.csv')
+    csvreader = csv.reader(file)
+    rows = []
+    for row in csvreader:
+            rows.append(row)
+    
+    
+    return render_template('CashierChef.html', pizzal = rows)
 
 # @app.route('/oven') 
 # def oven(): 
@@ -91,5 +174,6 @@ def chef():
 
 if __name__ == "__main__":
     dbSetup()
-    app.run()
+    app.config['DEBUG'] = True
+    app.run(host='145.93.73.178', port='8000', debug=True)
 
